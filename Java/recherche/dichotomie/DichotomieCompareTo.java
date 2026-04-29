@@ -1,3 +1,4 @@
+package recherche.dichotomie;
 import java.util.Scanner;
 
 public class DichotomieCompareTo {
