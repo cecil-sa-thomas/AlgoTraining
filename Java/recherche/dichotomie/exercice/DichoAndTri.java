@@ -1,4 +1,4 @@
-package exercice;
+package recherche.dichotomie.exercice;
 
 public class DichoAndTri {
 
@@ -9,58 +9,60 @@ public class DichoAndTri {
 
         String[] tabString1 = {"cerise", "banane", "ananas", "poire", "mangue", "pomme"};
         String[] tabString2 = {"lion", "zebre", "hyene", "crocodile", "elephant", "serpent"};
-        String[] tabString3 = {"cerise", "banane", "ananas", "poire", "mangue", "pomme"};
+        String[] tabString3 = {"cerise", "banane", "ananas", "poire", "pomme"};
         String[] tabString4 = {"lion", "zebre", "hyene", "crocodile", "elephant", "serpent"};
+
         int index = 0;
 
-        System.out.println(java.util.Arrays.toString(tabInt1 = bubbleSort(tabInt1)));
-        index = find(tabInt1, 2);
-        if(index != -1){
-            System.out.println(index);
-        }else{
-            System.out.println("La valeur recherché n'existe pas dans le tableau");
-        }
+        int[] tabIntCible;
+        String[] tabStringCible;
 
-        System.out.println(java.util.Arrays.toString(tabInt2 = selectionSort(tabInt2)));
-        index = find(tabInt2, 3);
-        if(index != -1){
-            System.out.println(index);
-        }else{
-            System.out.println("La valeur recherché n'existe pas dans le tableau");
-        }
+        int intCible;
+        String stringCible;
 
-        System.out.println(java.util.Arrays.toString((tabString1 = bubbleSort(tabString1))));
-        index = find(tabString1, "poire");
-        if(index != -1){
-            System.out.println(index);
-        }else{
-            System.out.println("La valeur recherché n'existe pas dans le tableau");
-        }
+        intCible = 2;
+        System.out.println(java.util.Arrays.toString((tabIntCible = selectionSort(tabInt1))));
+        afficherResultat(find(tabIntCible, intCible),intCible);
 
-        System.out.println(java.util.Arrays.toString((tabString2 = selectionSort(tabString2))));
-        index = find(tabString2, "crocodile");
-        if(index != -1){
-            System.out.println(index);
-        }else{
-            System.out.println("La valeur recherché n'existe pas dans le tableau");
-        }
+        intCible = 3;
+        System.out.println(java.util.Arrays.toString((tabIntCible = selectionSort(tabInt2))));
+        afficherResultat(find(tabIntCible, intCible),intCible);
 
-        System.out.println(java.util.Arrays.toString((tabString3 = bubbleSortNolib(tabString3))));
-        index = findNolib(tabString3, "poire");
-        if(index != -1){
-            System.out.println(index);
-        }else{
-            System.out.println("La valeur recherché n'existe pas dans le tableau");
-        }
+        stringCible = "poire";
+        System.out.println(java.util.Arrays.toString((tabStringCible = selectionSortNolib(tabString1))));
+        afficherResultat(findNolib(tabStringCible, stringCible),stringCible);
 
-        System.out.println(java.util.Arrays.toString((tabString4 = selectionSortNolib(tabString4))));
-        index = findNolib(tabString4, "hyene");
+
+        stringCible = "crocodile";
+        System.out.println(java.util.Arrays.toString((tabStringCible = selectionSortNolib(tabString2))));
+        afficherResultat(findNolib(tabStringCible, stringCible),stringCible);
+
+
+        stringCible = "poire";
+        System.out.println(java.util.Arrays.toString((tabStringCible = selectionSortNolib(tabString3))));
+        afficherResultat(findNolib(tabStringCible, stringCible),stringCible);
+
+        stringCible = "hyene";
+        System.out.println(java.util.Arrays.toString((tabStringCible = selectionSortNolib(tabString4))));
+        afficherResultat(findNolib(tabString4, stringCible),stringCible);
+    }
+    
+    public static void afficherResultat(int index, String cible){
         if(index != -1){
-            System.out.println(index);
+            System.out.println(cible + " trouvé à l'index : " + index);
         }else{
-            System.out.println("La valeur recherché n'existe pas dans le tableau");
+            System.out.println(cible + " n'existe pas dans le tableau");
         }
     }
+
+    public static void afficherResultat(int index, int cible){
+        if(index != -1){
+            System.out.println(cible + " trouvé à l'index : " + index);
+        }else{
+            System.out.println(cible + " n'existe pas dans le tableau");
+        }
+    }
+
 
     public static int[] bubbleSort(int[] targetTab){
         for(int i = 0 ; i < targetTab.length - 1 ; i++){
@@ -221,5 +223,6 @@ public class DichoAndTri {
         }
         return -1;
     }
-}
 
+
+}

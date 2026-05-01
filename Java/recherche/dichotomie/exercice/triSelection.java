@@ -1,4 +1,4 @@
-package exercice;
+package recherche.dichotomie.exercice;
 
 public class triSelection {
     public static void main(String [] args){
