@@ -1,4 +1,4 @@
-package recherche.dataStructure;
+package dataStructure;
 
 import java.util.ArrayList;
 import java.util.HashMap;

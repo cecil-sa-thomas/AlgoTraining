@@ -1,4 +1,4 @@
-package recherche.dichotomie.exercice;
+package tri;
 
 
 public class triBulle {
