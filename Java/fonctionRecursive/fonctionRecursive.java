@@ -17,7 +17,14 @@ public class fonctionRecursive {
         if (i == arr.length) {
             return 0;
         }
-        sum = sum + arr[i];
         return arr[i] + sommes(arr, i + 1);
+    }
+
+    public static int max(int[] arr, int i){
+        if(i == arr.length - 1){
+            return arr[i];
+        }
+        return Math.max(arr[i], max(arr, i + 1));
+        System.out.printLn("test pour commit git");
     }
 }
