@@ -1,10 +1,8 @@
 package dataStructure;
 
-import java.lang.reflect.Array;
-import java.util.ArrayList;
 import java.util.Arrays;
 
-public class tableaux {
+public class Tableaux {
     public static void main(String [] args){
         int[] tab = {1,2,3,4,5,6,7,8,9,10};
         int[] tab2 = {11,12,13,14,15,16,18,19,20};

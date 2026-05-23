@@ -2,7 +2,7 @@ package dataStructure;
 
 import java.util.HashMap;
 
-public class occurencesMots {
+public class OccurencesMots{
     public static void main(String[]arg){
 
         String phrase = "bonjour je suis je bonjour bonjour";

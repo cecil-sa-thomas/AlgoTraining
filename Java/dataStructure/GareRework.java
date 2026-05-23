@@ -10,7 +10,7 @@ import java.util.Queue;
 import java.util.Set;
 import java.util.Stack;
 
-public class gareGareRework {
+public class GareRework {
     public static void main(String[] args){
 
         HashMap<String,List<String>> mapGare = new HashMap<>();

@@ -3,7 +3,7 @@ public class fonctionRecursive {
         System.out.println(factorielle(10));
 
         int[] arr = {3,1,4,2};
-        System.out.println(sommes(arr,0,0));
+        System.out.println(sommes(arr,0));
     }
 
     public static int factorielle(int n) {
@@ -25,6 +25,5 @@ public class fonctionRecursive {
             return arr[i];
         }
         return Math.max(arr[i], max(arr, i + 1));
-        System.out.printLn("test pour commit git");
     }
 }
